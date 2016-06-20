@@ -167,7 +167,10 @@ div#notebook {
     });
     </script>
     <!-- End of mathjax configuration --></head>
-<body>
+<body ng-app>
+<input type="text" ng-model="name" placeholder="Enter your name">
+<h1>Hello <span ng-bind="name"></span></h1>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.js"></script>
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
@@ -242,7 +245,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Fun&#231;&#227;o">Fun&#231;&#227;o<a class="anchor-link" href="#Fun&#231;&#227;o">&#182;</a></h1>
+<h1 id="Fun&#231;&#227;o">Fun&#231;&#227;o<span ng-bind="name"></span><a class="anchor-link" href="#Fun&#231;&#227;o">&#182;</a></h1>
 </div>
 </div>
 </div>
