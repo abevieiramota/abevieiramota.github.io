@@ -40,12 +40,12 @@
 <ul>
 <li>Um identificador deve seguir o padrão <p>^[letter|$|_][letter|$|_|number]*$ - {keywords}</p> que o deus do regex me perdoe</li>
 <li>Keywords não comuns:<ul>
-<li>strictfp</li>
-<li>assert</li>
-<li>transient</li>
-<li>native</li>
-<li>synchronized</li>
-<li>volatile</li>
+<li><em>strictfp</em></li>
+<li><em>assert</em></li>
+<li><em>transient</em></li>
+<li><em>native</em></li>
+<li><em>synchronized</em></li>
+<li><em>volatile</em></li>
 </ul>
 </li>
 <li>CamelCase não é obrigatório. <div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">list</span> <span class="o">{}</span>
@@ -56,8 +56,8 @@
 </ul>
 <h1>Define Class</h1>
 <ul>
-<li>Apenas uma classe public por arquivo</li>
-<li>Se houver classe public, seu nome deve ser igual ao nome do arquivo</li>
+<li>Apenas uma classe <em>public</em> por arquivo</li>
+<li>Se houver classe <em>public</em>, seu nome deve ser igual ao nome do arquivo</li>
 <li>
 <p>Ordem das declarações:</p>
 <div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nn">br.com.abevieiramota</span><span class="o">;</span>
@@ -96,14 +96,14 @@
 <p>Import com * importa apenas os tipos no nível do pacote, e não dos subpacotes</p>
 </li>
 <li>Controle de acesso de tipos<ul>
-<li>public: tipo visível a todas tipo(a menos de tipo public no pacote default)</li>
-<li>default: tipo visível apenas a tipos do mesmo pacote</li>
+<li><em>public</em>: tipo visível a todas tipo(a menos de tipo public no pacote default)</li>
+<li><em>default</em>: tipo visível apenas a tipos do mesmo pacote</li>
 </ul>
 </li>
 <li>Modificadores de tipos<ul>
-<li>final</li>
-<li>strictfp - Do livro "Making a class strictfp means that any method code in the class will conform to the IEEE 754 standard rules for floating point."</li>
-<li>abstract<ul>
+<li><em>final</em></li>
+<li><em>strictfp</em> - Do livro "Making a class strictfp means that any method code in the class will conform to the IEEE 754 standard rules for floating point."</li>
+<li><em>abstract</em><ul>
 <li>se uma classe tem método abstract, então a classe deve ser abstract</li>
 </ul>
 </li>
