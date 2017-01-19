@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
         <meta charset="utf-8" />
-        <title>Abelardo Vieira Mota - Abelardo Vieira Mota</title>
+        <title>Preparatório para OCA 7 - anotações parte 4</title>
         <link rel="stylesheet" href="/theme/css/main.css" />
 
         <!--[if IE]>
@@ -14,13 +14,18 @@
         <header id="banner" class="body">
                 <h1><a href="/">Abelardo Vieira Mota </a></h1>
                 <nav><ul>
-                    <li><a href="/category/java.html">Java</a></li>
+                    <li class="active"><a href="/category/java.html">Java</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/preparatorio-para-oca-7-anotacoes-parte-4.html" rel="bookmark"
+           title="Permalink to Preparatório para OCA 7 - anotações parte 4">Preparatório para OCA 7 - anotações parte 4</a></h1>
+    </header>
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="/preparatorio-para-oca-7-anotacoes-parte-4.html">Preparatório para OCA 7 - anotações parte 4</a></h1>
+    <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2017-01-19T19:00:00-03:00">
                 Published: qui 19 janeiro 2017
@@ -31,7 +36,7 @@
         </address>
 <p>In <a href="/category/java.html">Java</a>.</p>
 
-</footer><!-- /.post-info --><h1>Literal, Assignments, and Variables</h1>
+</footer><!-- /.post-info -->      <h1>Literal, Assignments, and Variables</h1>
 <ul>
 <li>"A primitive literal is merely a souce code representation of the primitive data types"</li>
 <li>
@@ -228,153 +233,11 @@
 
 
 </li>
-</ul>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/preparatorio-para-oca-7-anotacoes-parte-3.html" rel="bookmark"
-                           title="Permalink to Preparatório para OCA 7 - anotações parte 3">Preparatório para OCA 7 - anotações parte 3</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2017-01-09T19:00:00-03:00">
-                Published: seg 09 janeiro 2017
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/abelardo-vieira-mota.html">Abelardo Vieira Mota</a>
-        </address>
-<p>In <a href="/category/java.html">Java</a>.</p>
-
-</footer><!-- /.post-info -->                <h1>Variable Declarations</h1>
-<ul>
-<li>all numbers are signed</li>
-<li>byte(8), short(16), int(32), long(64), float(32), double(64)</li>
-<li>char é 16 bits unsigned</li>
-<li>"before a local variable can be used, it must be initialized with a value(...) unlike instance variables - local variables don't get default values"</li>
-<li>"It's possible to declare …</li></ul>
-                <a class="readmore" href="/preparatorio-para-oca-7-anotacoes-parte-3.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/preparatorio-para-oca-7-anotacoes-parte-2.html" rel="bookmark"
-                           title="Permalink to Preparatório para OCA 7 - anotações parte 2">Preparatório para OCA 7 - anotações parte 2</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2017-01-06T20:00:00-03:00">
-                Published: sex 06 janeiro 2017
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/abelardo-vieira-mota.html">Abelardo Vieira Mota</a>
-        </address>
-<p>In <a href="/category/java.html">Java</a>.</p>
-
-</footer><!-- /.post-info -->                <h1>Use Interface</h1>
-<ul>
-<li>Todos os métodos de interface são implicitamente <em>public abstract</em></li>
-<li>
-<p>Todas variáveis de interface são implicitamente <em>public static final</em></p>
-<div class="highlight"><pre><span></span><span class="kd">interface</span> <span class="nc">Foo</span> <span class="o">{</span>
-    <span class="kt">int</span> <span class="n">BAR</span> <span class="o">=</span> <span class="mi">32</span><span class="o">;</span>
-    <span class="kt">void</span> <span class="nf">go</span><span class="o">();</span>
-<span class="o">}</span>
-
-<span class="kd">class</span> <span class="nc">Zap</span> <span class="kd">implements</span> <span class="n">Foo</span> <span class="o">{</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">go</span><span class="o">()</span> <span class="o">{</span>
-        <span class="c1">// compilation error - BAR é final</span>
-        <span class="n">BAR</span> <span class="o">=</span> <span class="mi">43</span><span class="o">;</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-</pre></div>
-
-
-</li>
-<li>
-<p>Interface não pode ter método <em>static</em>, <em>final</em>, <em>strictfp</em> ou …</p></li></ul>
-                <a class="readmore" href="/preparatorio-para-oca-7-anotacoes-parte-2.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/preparatorio-para-oca-7-anotacoes-parte-1.html" rel="bookmark"
-                           title="Permalink to Preparatório para OCA 7 - anotações parte 1">Preparatório para OCA 7 - anotações parte 1</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2017-01-05T16:00:00-03:00">
-                Published: qui 05 janeiro 2017
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/abelardo-vieira-mota.html">Abelardo Vieira Mota</a>
-        </address>
-<p>In <a href="/category/java.html">Java</a>.</p>
-
-</footer><!-- /.post-info -->                <h1>Identifiers and Keywords</h1>
-<ul>
-<li>Um identificador deve seguir o padrão <p>^[letter|$|_][letter|$|_|number]*$ - {keywords}</p> que o deus do regex me perdoe</li>
-<li>Keywords não comuns:<ul>
-<li><em>strictfp</em></li>
-<li><em>assert</em></li>
-<li><em>transient</em></li>
-<li><em>native</em></li>
-<li><em>synchronized</em></li>
-<li><em>volatile</em></li>
 </ul>
-</li>
-<li>CamelCase não é obrigatório. <div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">list</span> <span class="o">{}</span>
-</pre></div>
+    </div><!-- /.entry-content -->
 
-
-</li>
-</ul>
-<h1>Define Class</h1>
-<ul>
-<li>Apenas uma classe <em>public</em> por arquivo</li>
-<li>Se houver classe <em>public</em>, seu …</li></ul>
-                <a class="readmore" href="/preparatorio-para-oca-7-anotacoes-parte-1.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/preparatorio-para-oca-7.html" rel="bookmark"
-                           title="Permalink to Preparatório para OCA 7">Preparatório para OCA 7</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2017-01-04T20:19:00-03:00">
-                Published: qua 04 janeiro 2017
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/abelardo-vieira-mota.html">Abelardo Vieira Mota</a>
-        </address>
-<p>In <a href="/category/java.html">Java</a>.</p>
-
-</footer><!-- /.post-info -->                <p>Estou me preparando para a certificação <strong>Oracle Certified Associate, Java SE 7 Programmer</strong>, vulgo OCA 7.</p>
-<p>A motivação inicial foi ter mais um item no currículo. Agora que já estou revisando o conteúdo, vejo que os benefícios vão além: </p>
-<ul>
-<li><strong>aprofundei meus conhecimentos sobre a linguagem</strong>: apesar de já ter lá …</li></ul>
-                <a class="readmore" href="/preparatorio-para-oca-7.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-                </ol><!-- /#posts-list -->
-                </section><!-- /#content -->
+  </article>
+</section>
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h2>links</h2>
