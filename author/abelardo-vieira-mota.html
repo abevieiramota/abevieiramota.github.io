@@ -14,13 +14,172 @@
         <header id="banner" class="body">
                 <h1><a href="/">Abelardo Vieira Mota </a></h1>
                 <nav><ul>
+                    <li><a href="/pages/sobre-mim.html">Sobre mim</a></li>
                     <li><a href="/category/java.html">Java</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/preparatorio-para-oca-7-anotacoes-parte-4.html">Preparatório para OCA 7 - anotações parte 4</a></h1>
+                    <h1 class="entry-title"><a href="/preparatorio-para-oca-7-anotacoes-parte-5.html">Preparatório para OCA 7 - anotações parte 5</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2017-01-21T19:00:00-03:00">
+                Published: sáb 21 janeiro 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/abelardo-vieira-mota.html">Abelardo Vieira Mota</a>
+        </address>
+<p>In <a href="/category/java.html">Java</a>.</p>
+
+</footer><!-- /.post-info --><h1>Using if and switch Statements</h1>
+<ul>
+<li>
+<p>ifs sem formatação</p>
+<div class="highlight"><pre><span></span><span class="k">if</span><span class="o">(</span><span class="n">exam</span><span class="o">.</span><span class="na">done</span><span class="o">())</span>
+<span class="k">if</span><span class="o">(</span><span class="n">exam</span><span class="o">.</span><span class="na">getScore</span><span class="o">()</span> <span class="o">&lt;</span> <span class="mf">.95</span><span class="o">)</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Try again.&quot;</span><span class="o">);</span>
+<span class="k">else</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Java Master!&quot;</span><span class="o">);</span>
+
+<span class="k">if</span><span class="o">(</span><span class="n">exam</span><span class="o">.</span><span class="na">done</span><span class="o">())</span> <span class="o">{</span>
+    <span class="k">if</span><span class="o">(</span><span class="n">exam</span><span class="o">.</span><span class="na">getScore</span><span class="o">()</span> <span class="o">&lt;</span> <span class="mf">.95</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Try again.&quot;</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+<span class="k">else</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Java Master!&quot;</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></div>
+
+
+</li>
+<li>
+<p>a &amp;&amp; b | c &amp;&amp; d = a &amp;&amp; (b | (c &amp;&amp; d))</p>
+</li>
+<li>
+<p>switch</p>
+<div class="highlight"><pre><span></span><span class="k">switch</span><span class="o">(</span><span class="n">expression</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">case</span> <span class="n">constant1</span><span class="o">:</span> <span class="n">code</span><span class="o">;</span>
+    <span class="k">case</span> <span class="n">constant2</span><span class="o">:</span> <span class="n">code</span><span class="o">;</span>
+    <span class="k">default</span><span class="o">:</span> <span class="n">code</span><span class="o">;</span>
+<span class="o">}</span>
+
+<span class="c1">// expression -&gt; char, byte, short, int, enum, String</span>
+<span class="c1">// constant -&gt; literal ou final variable INICIALIZADA NA DECLARAÇÃO</span>
+
+<span class="kd">final</span> <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+<span class="kd">final</span> <span class="kt">int</span> <span class="n">b</span><span class="o">;</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="k">switch</span><span class="o">(</span><span class="n">x</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">case</span> <span class="n">a</span><span class="o">:</span>
+    <span class="k">case</span> <span class="n">b</span><span class="o">:</span>
+<span class="o">}</span>
+
+<span class="c1">// constant -&gt; deve pertencer ao range do tipo da expression</span>
+<span class="c1">// OK</span>
+<span class="kt">byte</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span><span class="o">;</span>
+<span class="kt">byte</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span>
+<span class="k">switch</span><span class="o">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">case</span> <span class="mi">128</span><span class="o">:</span>
+<span class="o">}</span>
+<span class="c1">// COMPILATION ERROR</span>
+<span class="kt">byte</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span>
+<span class="k">switch</span><span class="o">(</span><span class="n">a</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">case</span> <span class="mi">128</span><span class="o">:</span>
+<span class="o">}</span>
+</pre></div>
+
+
+</li>
+<li>
+<p>"It's also illegal to have more than one case label using the same value."</p>
+</li>
+<li>"case constants are evaluated from the top down"</li>
+<li>fall throught<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">7</span><span class="o">;</span>
+<span class="k">switch</span><span class="o">(</span><span class="n">x</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">case</span> <span class="mi">2</span><span class="o">:</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">&quot;2 &quot;</span><span class="o">);</span>
+    <span class="k">default</span><span class="o">:</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">&quot;default &quot;</span><span class="o">);</span>
+    <span class="k">case</span> <span class="mi">3</span><span class="o">:</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">&quot;3 &quot;</span><span class="o">);</span>
+    <span class="k">case</span> <span class="mi">4</span><span class="o">:</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">&quot;4 &quot;</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="c1">// resultado -&gt; default 3 4</span>
+</pre></div>
+
+
+</li>
+</ul>
+<h1>Creating Loop Constructs</h1>
+<ul>
+<li>for(/<em> initialization </em>/;;)<ul>
+<li>se for declarar, só pode declarar variáveis de um tipo; ex: for(int a = 10, b = 20;;)</li>
+<li>se não for declarar, pode inicializar de diversos tipos</li>
+</ul>
+</li>
+<li>for(;/<em> condition </em>/;)<ul>
+<li>se ausente, true; ex: for(;;) {} // loop infinito</li>
+</ul>
+</li>
+<li>for(;;/<em> iteration </em>/)<ul>
+<li>pode ser qualquer statement não bloco(na verdade, não sei delimitar o que pode, mas bloco não pode), separados por vírgula</li>
+</ul>
+</li>
+<li>
+<div class="highlight"><pre><span></span><span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">10</span><span class="o">,</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">20</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">j</span><span class="o">;</span> <span class="n">i</span><span class="o">++,</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">i</span><span class="o">),</span> <span class="n">j</span><span class="o">+=</span><span class="mi">2</span><span class="o">)</span> <span class="o">{}</span>
+</pre></div>
+
+
+</li>
+<li>
+<p>"when the continue statement is hit, the iteration expression still runs!"</p>
+<div class="highlight"><pre><span></span><span class="nl">fora:</span> <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="o">;</span> <span class="n">x</span><span class="o">++)</span> <span class="o">{</span>
+    <span class="k">for</span><span class="o">(;;</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;dentro&quot;</span><span class="o">))</span> <span class="o">{</span>
+        <span class="k">continue</span> <span class="n">fora</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+<span class="c1">// resultado -&gt; nada é impresso, o continue ativa o código de iteration do loop que ele continua</span>
+</pre></div>
+
+
+</li>
+<li>
+<p>"Labeled continue and break statements must be inside the loop that has the same label name, otherwise, the code will not compile."</p>
+</li>
+</ul>
+<h1>Handling Exceptions</h1>
+<ul>
+<li>"It's illegal to use a try clause without either a catch clause or a finally clause"</li>
+<li>
+<p>Object</p>
+<ul>
+<li>Throwable<ul>
+<li>Error</li>
+<li>Exception<ul>
+<li>RuntimeException</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>"The handler for the most specific exception must always be placed above those for more general exceptions."</p>
+</li>
+</ul>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/preparatorio-para-oca-7-anotacoes-parte-4.html" rel="bookmark"
+                           title="Permalink to Preparatório para OCA 7 - anotações parte 4">Preparatório para OCA 7 - anotações parte 4</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2017-01-19T19:00:00-03:00">
                 Published: qui 19 janeiro 2017
@@ -31,7 +190,7 @@
         </address>
 <p>In <a href="/category/java.html">Java</a>.</p>
 
-</footer><!-- /.post-info --><h1>Literal, Assignments, and Variables</h1>
+</footer><!-- /.post-info -->                <h1>Literal, Assignments, and Variables</h1>
 <ul>
 <li>"A primitive literal is merely a souce code representation of the primitive data types"</li>
 <li>
@@ -47,193 +206,10 @@
 </ul>
 </li>
 <li>
-<p>binary literals: starts with 0b or 0B</p>
-</li>
-<li>octal literals: starts with 0</li>
-<li>hexadecimal literals: starts with 0x or 0X<ul>
-<li>0XCAFE = 0xcafe</li>
-</ul>
-</li>
-<li>by default, a integer literal is int, but you can place suffix L or l to turn it into long</li>
-<li>
-<p>floating-point literals are defined as double by default</p>
-<div class="highlight"><pre><span></span><span class="kt">float</span> <span class="n">a</span> <span class="o">=</span> <span class="mf">12.3</span><span class="o">;</span> <span class="c1">// COMPILATION ERROR - possible loss of precision</span>
-<span class="kt">float</span> <span class="n">a</span> <span class="o">=</span> <span class="mf">12.3F</span><span class="o">;</span> <span class="c1">// OK</span>
-<span class="kt">float</span> <span class="n">a</span> <span class="o">=</span> <span class="mf">12.F</span><span class="o">;</span> <span class="c1">// OK</span>
-<span class="kt">float</span> <span class="n">a</span> <span class="o">=</span> <span class="mf">.3F</span><span class="o">;</span> <span class="c1">// OK</span>
-</pre></div>
-
-
-</li>
-<li>
-<p>character literals</p>
-<div class="highlight"><pre><span></span><span class="kt">char</span> <span class="n">a</span> <span class="o">=</span> <span class="sc">&#39;a&#39;</span><span class="o">;</span>
-<span class="kt">char</span> <span class="n">b</span> <span class="o">=</span> <span class="sc">&#39;\u004e&#39;</span><span class="o">;</span>
-</pre></div>
-
-
-</li>
-<li>
-<p>caracteres são 16 bit unsigned, podem receber numerais que pertençam ao seu range ou via cast</p>
-<div class="highlight"><pre><span></span><span class="kt">char</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">982</span><span class="o">;</span>
-<span class="kt">char</span> <span class="n">b</span> <span class="o">=</span> <span class="o">(</span><span class="kt">char</span><span class="o">)</span> <span class="mi">70000</span><span class="o">;</span> <span class="c1">// int value 4464</span>
-</pre></div>
-
-
-</li>
-</ul>
-<h1>Assignment Operators</h1>
-<ul>
-<li>
-<p>toda operação com numéricos inteiros de tipo menor ou igual a int resultam em int</p>
-<div class="highlight"><pre><span></span><span class="kt">byte</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
-<span class="kt">byte</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-<span class="kt">byte</span> <span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">;</span> <span class="c1">// COMPILATION ERROR</span>
-
-<span class="kt">byte</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">0</span><span class="o">;</span> <span class="c1">// OK</span>
-<span class="kd">final</span> <span class="kt">byte</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
-<span class="kd">final</span> <span class="kt">byte</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-<span class="kt">byte</span> <span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="o">;</span> <span class="c1">// OK</span>
-</pre></div>
-
-
-</li>
-<li>
-<p>"Typically, an implicit cast happens when you're doing a widening conversion - in other words, putting a smaller thing(say, a byte) into a bigger container(say, a long)"</p>
-</li>
-<li>
-<p>"The large-value-into-small-container conversion is referred to as narrowing and requires an explicit cast"</p>
-<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">x2</span> <span class="o">=</span> <span class="mi">20</span><span class="o">;</span>
-<span class="kt">short</span> <span class="n">y</span> <span class="o">=</span> <span class="n">x2</span><span class="o">;</span> <span class="c1">// COMPILATION ERROR</span>
-
-<span class="kd">final</span> <span class="n">x1</span> <span class="o">=</span> <span class="mi">20</span><span class="o">;</span>
-<span class="kt">short</span> <span class="n">y</span> <span class="o">=</span> <span class="n">x1</span><span class="o">;</span> <span class="c1">// OK</span>
-
-<span class="kt">long</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
-<span class="kt">float</span> <span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="o">;</span>
-</pre></div>
-
-
-</li>
-<li>
-<p>cast de número decimal para inteiro -&gt; perde a parte decimal</p>
-</li>
-<li>"when you narrow a primitive, Java simply truncates the higher-order bits that won't fit"</li>
-<li>"The compound assingment operator += lets you add to the value of b, without putting in an explicit cast. In fact, +=, -=, *=, and /= will all put in an implicit cast."</li>
-</ul>
-<h1>Scope</h1>
-<ul>
-<li>escopo de variáveis<ul>
-<li>static: criado quando a classe é carregada e mantido enquanto a classe estiver carregada</li>
-<li>instance: criado quando uma instância é criada e mantido enquanto a instância não for removida</li>
-<li>local: mantido enquanto o método onde está declarada estiver na stack</li>
-<li>block: mantido enquanto o bloco estiver executando</li>
-</ul>
-</li>
-</ul>
-<h1>Variable Initialization</h1>
-<ul>
-<li>"instance variables are initialized to a default value each time a new instance is created"</li>
-<li>char default value = '\u0000'</li>
-<li>array não inicializado = null</li>
-<li>array inicializado = todos slots com valores default</li>
-<li>"local variables, including primitives, always, always, always must be initialized before you attempt to use them"<div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">A</span> <span class="o">{</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">String</span> <span class="n">nome</span><span class="o">;</span>
-        <span class="k">if</span><span class="o">(</span><span class="n">nome</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span> <span class="c1">// COMPILATION ERROR</span>
-            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;oi&quot;</span><span class="o">);</span>
-        <span class="o">}</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-</pre></div>
-
-
-</li>
-</ul>
-<h1>Passing Variables into Methods</h1>
-<ul>
-<li>"Java is actually pass-by-value for all variables running within a single JVM"</li>
-<li>Shadowing -&gt; apenas se uma for de escopo static ou instance e a outra local ou block</li>
-</ul>
-<h1>Garbage Collection</h1>
-<ul>
-<li>"an object is eligible for garbage collection when no live thread can access it"</li>
-</ul>
-<h1>Java Operators</h1>
-<ul>
-<li>"if a floating-point number is compared with an integer and the values are the same, the == operator usually returns true as expected"</li>
-<li>
-<p>"The instanceof operator is used for object reference variables only"</p>
-<div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">A</span><span class="o">{}</span>
-<span class="kd">class</span> <span class="nc">B</span><span class="o">{</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">B</span> <span class="n">b</span> <span class="o">=</span> <span class="k">new</span> <span class="n">B</span><span class="o">();</span>
-        <span class="k">if</span><span class="o">(</span><span class="n">b</span> <span class="k">instanceof</span> <span class="n">A</span><span class="o">)</span> <span class="o">{</span>
-            <span class="c1">//  COMPILATION ERRO -&gt; B não pertence é subclasse de A</span>
-        <span class="o">}</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-</pre></div>
-
-
-</li>
-<li>
-<p>null instanceof X = false</p>
-</li>
-<li>((A) null) instanceof A = false</li>
-<li>new B[10] instanceof A[] = true, se B extends A</li>
-<li>+= com String<div class="highlight"><pre><span></span><span class="n">String</span> <span class="n">a</span> <span class="o">=</span> <span class="s">&quot;oi&quot;</span><span class="o">;</span>
-<span class="n">B</span> <span class="n">b</span> <span class="o">=</span> <span class="k">new</span> <span class="n">B</span><span class="o">();</span>
-<span class="n">a</span> <span class="o">+=</span> <span class="n">b</span><span class="o">;</span> <span class="c1">// OK - chama toString</span>
-</pre></div>
-
-
-</li>
-</ul>
-<h1>Using String and StringBuilder</h1>
-<ul>
-<li>String é final</li>
-<li>String s = new String("asaas"); -&gt; cria 2 objetos</li>
-<li>equals, equalsIgnoreCase (null) = false</li>
-<li>"0123456".substring(1, 3) = "12"</li>
-<li>new StringBuilder().append("as").reverse().insert(2, "ias").toString();</li>
-</ul>
-<h1>Using Arrays</h1>
-<ul>
-<li>arrays are objects</li>
-<li>acesso a posição fora dos limites do array -&gt; RuntimeException</li>
-<li>
-<p>inicialização</p>
-<div class="highlight"><pre><span></span><span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span> <span class="o">=</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">};</span>
-<span class="kt">int</span><span class="o">[]</span> <span class="n">arr2</span><span class="o">;</span>
-<span class="n">arr2</span> <span class="o">=</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">};</span> <span class="c1">// COMPILATION ERROR</span>
-<span class="n">arr2</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[]</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">};</span> <span class="c1">// OK</span>
-</pre></div>
-
-
-</li>
-<li>
-<p>"Primitive array can accept any value that can be promoted implicitly to the declared type of the array"</p>
-<div class="highlight"><pre><span></span><span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">3</span><span class="o">];</span>
-<span class="n">arr</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="o">(</span><span class="kt">byte</span><span class="o">)</span> <span class="mi">4</span><span class="o">;</span>
-<span class="n">arr</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="sc">&#39;c&#39;</span><span class="o">;</span>
-<span class="n">arr</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="o">(</span><span class="kt">short</span><span class="o">)</span> <span class="mi">3</span><span class="o">;</span>
-
-<span class="kt">char</span><span class="o">[]</span> <span class="n">charr</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">char</span><span class="o">[</span><span class="mi">3</span><span class="o">];</span>
-<span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span> <span class="o">=</span> <span class="n">charr</span><span class="o">;</span> <span class="c1">// COMPILATION ERROR</span>
-<span class="n">B</span><span class="o">[]</span> <span class="n">bs</span> <span class="o">=</span> <span class="k">new</span> <span class="n">B</span><span class="o">[</span><span class="mi">2</span><span class="o">];</span>
-<span class="n">A</span><span class="o">[]</span> <span class="n">as</span> <span class="o">=</span> <span class="n">bs</span><span class="o">;</span> <span class="c1">// OK</span>
-<span class="n">bs</span> <span class="o">=</span> <span class="k">new</span> <span class="n">B</span><span class="o">[</span><span class="mi">1000</span><span class="o">];</span> <span class="c1">// OK</span>
-</pre></div>
-
-
-</li>
-</ul>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+<p>binary …</p></li></ul>
+                <a class="readmore" href="/preparatorio-para-oca-7-anotacoes-parte-4.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
@@ -348,32 +324,11 @@
                 <a class="readmore" href="/preparatorio-para-oca-7-anotacoes-parte-1.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/preparatorio-para-oca-7.html" rel="bookmark"
-                           title="Permalink to Preparatório para OCA 7">Preparatório para OCA 7</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2017-01-04T20:19:00-03:00">
-                Published: qua 04 janeiro 2017
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/abelardo-vieira-mota.html">Abelardo Vieira Mota</a>
-        </address>
-<p>In <a href="/category/java.html">Java</a>.</p>
-
-</footer><!-- /.post-info -->                <p>Estou me preparando para a certificação <strong>Oracle Certified Associate, Java SE 7 Programmer</strong>, vulgo OCA 7.</p>
-<p>A motivação inicial foi ter mais um item no currículo. Agora que já estou revisando o conteúdo, vejo que os benefícios vão além: </p>
-<ul>
-<li><strong>aprofundei meus conhecimentos sobre a linguagem</strong>: apesar de já ter lá …</li></ul>
-                <a class="readmore" href="/preparatorio-para-oca-7.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
                 </ol><!-- /#posts-list -->
+<p class="paginator">
+    Page 1 / 2
+        <a href="/author/abelardo-vieira-mota2.html">&raquo;</a>
+</p>
                 </section><!-- /#content -->
         <section id="extras" class="body">
                 <div class="blogroll">
